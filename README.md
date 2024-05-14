@@ -1,4 +1,4 @@
-# LCS and SCS Calculator with Trie Support
+# LCS and SCS finder with Trie Support
 
 ## Overview
 
