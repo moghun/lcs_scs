@@ -25,6 +25,20 @@ int LCS::getLCSLength() const {
     return dp[seq1.length()][seq2.length()];
 }
 
+// Other existing methods...
+
+void LCS::printAllLCS(std::vector<std::string> &lcsList) {
+    if (lcsList.empty()) {
+        std::cout << "No LCS available." << std::endl;
+        return;
+    }
+    std::cout << "All Longest Common Subsequences:" << std::endl;
+    for (const auto& lcs : lcsList) {
+        std::cout << lcs << std::endl;
+    }
+}
+
+
 // Generates all LCS using a backtracking stack approach, inserting them into a Trie for unique collection
 std::vector<std::string> LCS::getLCS() {
     if (seq1.empty() || seq2.empty()) {
@@ -57,6 +71,7 @@ std::vector<std::string> LCS::getLCS() {
             }
         }
     }
+
 
     return trie.getKeysWithGivenLength(getLCSLength());
 }

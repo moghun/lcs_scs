@@ -11,15 +11,17 @@
 class LCS {
 private:
     std::vector<std::vector<int>> dp;
+    Trie trie;
     std::string seq1;
     std::string seq2;
     void fillDP();
-    Trie trie;
+
 
 public:
     LCS(std::string seq_1, std::string  seq_2);
     std::vector<std::string> getLCS();
     int getLCSLength() const;
+    void printAllLCS(std::vector<std::string>&);
 };
 
 #endif

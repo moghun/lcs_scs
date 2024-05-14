@@ -26,7 +26,8 @@ int main() {
 
         if (choice == 1) {
             LCS lcs(seq1, seq2);
-            std::cout << "The Longest Common Subsequence is: " << lcs.getLCS().front() << std::endl;
+            std::vector<std::string> lcsVec = lcs.getLCS();
+            lcs.printAllLCS(lcsVec);
             std::cout << "Length of LCS: " << lcs.getLCSLength() << std::endl;
         } else if (choice == 2) {
             SCS scs(seq1, seq2);
